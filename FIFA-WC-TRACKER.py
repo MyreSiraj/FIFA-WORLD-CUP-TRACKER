@@ -32,14 +32,14 @@ app.layout = html.Div([
         options=[{"label": c, "value": c} for c in winners_count["Country"]],
         placeholder="Select a Country",
     ),
-    html.Div(id="country_wins", style={'color': 'white'}),
+    html.Div(id="country_wins", style={'color': 'red'}),
 
     dcc.Dropdown(
         id="year_dropdown",
         options=[{"label": str(y), "value": y} for y in df["Year"].unique()],
         placeholder="Select a Year",
     ),
-    html.Div(id="year_results", style={'color': 'white'}),
+    html.Div(id="year_results", style={'color': 'red'}),
 ])
 
 @app.callback(
